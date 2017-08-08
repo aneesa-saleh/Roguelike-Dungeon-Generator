@@ -621,7 +621,10 @@ let Dungeon = (function(){
   let rooms = [];
   //put rooms on the board
   drawRandomRooms(blocksArray,attempts,minRoomSize,maxRoomSize,padding,rooms);
-  
+  //delete connected_rooms from the 'rooms' objects. Only useful for drawing passages
+  for(let i = 0;i < rooms.length; i++){
+    delete rooms[i].connected_rooms;
+  }
   return {dungeon: blocksArray, rooms};
   }
 }
