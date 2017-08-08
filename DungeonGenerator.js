@@ -473,8 +473,8 @@ let Dungeon = (function(){
 }
   
   //this function places rooms randomly within the array
-  function drawRandomRooms(blocksArray,attempts,minRoomSize,maxRoomSize,padding){
-    let rooms = [], size = blocksArray.length;
+  function drawRandomRooms(blocksArray,attempts,minRoomSize,maxRoomSize,padding,rooms){
+    let size = blocksArray.length;
     //keep trying until the number of attempts is 0
     while(attempts > 0){
       attempts--;
@@ -617,10 +617,12 @@ let Dungeon = (function(){
       }
       blocksArray.push(tempArray.slice(0));
   }
+  //this array will hold coordinates and dimensions of all rooms
+  let rooms = [];
   //put rooms on the board
-  drawRandomRooms(blocksArray,attempts,minRoomSize,maxRoomSize,padding);
+  drawRandomRooms(blocksArray,attempts,minRoomSize,maxRoomSize,padding,rooms);
   
-  return blocksArray;
+  return {dungeon: blocksArray, rooms};
   }
 }
   return Dungeon;
