@@ -202,12 +202,12 @@ let Dungeon = (function(){
   //this function connects all rooms with passages
   function drawPassages(blocksArray,rooms,minRoomSize){
     let size = blocksArray.length;
-    //minimum rows or columns in common between rooms to make a connection. Smaller when the minimum room size is smaller.
-    let minCommon;
-    if(minRoomSize <= 5)
-      minCommon = 2;
-    else
-      minCommon = 3;
+    //minimum rows or columns in common between rooms to make a connection
+    let minCommon = 2;
+//     if(minRoomSize <= 5)
+//       minCommon = 2;
+//     else
+//       minCommon = 3;
     
     rooms.forEach((room,index,rooms) => {
       //horizontally connected rooms
