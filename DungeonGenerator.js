@@ -31,7 +31,7 @@ let Dungeon = (function(){
         blocksArray[a.row][i].type = 'passage';
       }
     }
-    
+    wqe
     //draw vertically otherwise
     else{
       let start = a.row > b.row ? b.row : a.row;
@@ -627,7 +627,7 @@ let Dungeon = (function(){
   }
   return {dungeon: blocksArray, rooms};
   }
-}
+};
   return Dungeon;
   
 })();
