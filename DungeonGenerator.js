@@ -525,7 +525,7 @@ let Dungeon = (function(){
 *                        -  {type: 'passage'}
 */
   
-  let Dungeon = {
+  let DungeonGenerator = {
   generator: function(size,attempts,minRoomSize,maxRoomSize){
    //validate params
    //if number of args is not 4, use default values, log to console
@@ -628,6 +628,5 @@ let Dungeon = (function(){
   return {dungeon: blocksArray, rooms};
   }
 };
-  return Dungeon;
-  
+  return DungeonGenerator;
 })();
