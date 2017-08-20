@@ -613,7 +613,7 @@ var Dungeon = function () {
         }
 
       var blocksArray = [],
-          padding = 2;
+          padding = 4;
       for (var i = 0; i < size; i++) {
         var tempArray = [];
         for (var j = 0; j < size; j++) {
